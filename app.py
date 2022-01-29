@@ -316,7 +316,7 @@ def sunburst():
     return plot
 
 # Create a Title for the Dashboard
-title = pn.Column("# Realestate Analysis of San Fransisco from 2010 to 2016")
+page = pn.Column("# Realestate Analysis of San Fransisco from 2010 to 2016 - [source code](https://github.com/JQH84/Rental-Analysis-Dashboard) ")
 
 # Create a tab layout for the dashboard
 welcome = pn.Column("""
@@ -335,7 +335,7 @@ parallel = pn.Column(parallel_coordinates(),parallel_categories())
 sinburst = pn.Column(sunburst())
 
 # Create the dashboard
-sfo_dashboard_tabs = pn.Tabs (
+sfo_dashboard_page = pn.Tabs (
     
     ("Welcome", welcome),
     ("Yearly Market Analysis" , year_market),
@@ -344,5 +344,8 @@ sfo_dashboard_tabs = pn.Tabs (
     ("Sunburst Plot Analysis" , sunburst)
 )
 
+#append the tabs to page where the title exists before rendering
+page.append(sfo_dashboard_page)
+
 # Serve the# dashboard
-sfo_dashboard_tabs.servable(title = 'Rental Analysis Dashboard')
+page.servable(title='Rental Analysis Dashboard')
