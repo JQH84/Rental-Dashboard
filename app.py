@@ -285,7 +285,8 @@ def neighborhood_map():
         size = 'sale_price_sqr_foot' ,
         color = 'gross_rent' ,
         color_continuous_scale = px.colors.cyclical.IceFire,
-        zoom =10 , 
+        zoom =10 ,
+        mapbox_style = 'open-street-map',
         width = 1000, 
         height = 600 ,
         title = "Avarage Sale Price Per Sqaure Foot and Gross Rent in SFO"
