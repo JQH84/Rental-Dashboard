@@ -308,7 +308,7 @@ def sunburst():
         df_expensive_neighborhoods_per_year,
         title= 'Sunbusrt Analysis fir Most Expensive San Fransisco Neighborhoods by Year',
         path = [ 'year' , 'neighborhood'],
-        values = 'gross_rent',
+        values = 'sale_price_sqr_foot',
         color = 'gross_rent',
         color_continuous_scale='RdBu' ,
         color_continuous_midpoint=np.average(df_expensive_neighborhoods_per_year['gross_rent']),
