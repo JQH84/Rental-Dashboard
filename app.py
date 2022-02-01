@@ -48,7 +48,8 @@ px.scatter_mapbox(
         color_continuous_scale = px.colors.cyclical.IceFire,
         zoom =10 , 
         width = 700, 
-        height = 500 ,
+        height = 500 , 
+        mapbox_style = 'open-street-map',
         title = "Avarage Sale Price Per Sqaure Foot and Gross Rent in SFO"
     )
 
